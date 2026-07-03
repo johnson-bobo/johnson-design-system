@@ -178,7 +178,7 @@
   left: 50%;
   top: 0; bottom: 0;
   width: 2px;
-  background: rgba(43, 127, 216, 0.15);
+  background: rgba(30, 58, 138, 0.15);
 }
 .timeline-item {
   display: grid;
@@ -657,7 +657,7 @@
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
   font-weight: 900;
-  color: rgba(43,127,216,0.12);
+  color: rgba(30,58,138,0.12);
   min-width: 36px;
   transition: all 0.3s ease;
 }
@@ -696,10 +696,10 @@
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
-  color: rgba(43,127,216,0.15);
+  color: rgba(30,58,138,0.15);
 }
-.step-item:nth-child(3n+2) .step-num { color: rgba(244,215,88,0.35); }
-.step-item:nth-child(3n) .step-num { color: rgba(232,74,95,0.2); }
+.step-item:nth-child(3n+2) .step-num { color: rgba(250,204,21,0.35); }
+.step-item:nth-child(3n) .step-num { color: rgba(249,115,22,0.2); }
 .step-item .step-info h4 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.3rem;

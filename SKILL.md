@@ -1,81 +1,90 @@
 ---
-name: personal-design-system
-description: 个人IP设计系统模板。做HTML页面、个人网站、教程页面、介绍页面、landing page等任何前端设计时自动触发。包含品牌DNA和多个场景子规范。
+name: johnson-engineering-design-system
+description: Johnson 工程技术个人 IP 设计系统。做 HTML 页面、个人主页、技术教程、Landing Page、工程汇报页、知识卡片、有限元/疲劳/振动/耐久/AI 工程说明页时自动触发。
 ---
 
-> ❗ **首次使用前必须完成配置：**
-> 1. 打开 `brand-dna.md`，把所有 `YOUR_XXX` 占位符替换成你自己的品牌色/信息
-> 2. 将你的头像放入 `assets/avatar.jpg`（正方形，至少400×400px）
-> 3. 如有IP形象，放入 `assets/character.png`
-> 4. 根据你的品牌调性修改 `brand-dna.md` 中的“气质关键词”和“禁忌清单”
->
-> 不完成配置就直接用，出来的东西会是通用模板感。
+# Johnson Engineering Design System Skill
 
-触发条件：当用户要求制作HTML网页、个人页面、教程页面、介绍型页面、landing page、活动页面、App型页面、作品集等任何前端设计相关任务时触发。也在用户说“做图文”、“图文卡片”、“小红书图文”、“文章转卡片”、“转成图文”、“做卡片”时触发。
+当用户要求生成网页、HTML、Landing Page、教程页、图文卡片或技术说明页时，优先使用 Johnson Engineering Design System。
 
-## 使用方式(7步工作流)
+## 核心定位
 
-### Step 1: 澄清需求
-向用户确认5个问题:
-1. **类型** - 教程/介绍/科普?活动页/Landing?App型/功能型?**图文卡片?**
-2. **受众** - 给谁看的?技术水平?
-3. **Section数** - 大概几屏内容?
-4. **素材** - 有哪些文案/图片/数据?
-5. **硬约束** - 必须包含什么?有没有合作品牌色?
+Johnson 是力学工程师 / Simulation Engineer，内容聚焦：
 
-### Step 2: 读规范
-1. **必读** `brand-dna.md` - 确认品牌底层规范
-2. 根据类型选读场景文件:
-   - 教程型/介绍型/科普型 → `references/scene-tutorial.md`
-   - 活动页/分享会/Landing → `references/scene-landing.md`
-   - App型/功能型(看板/书架/Canvas) → `references/scene-app.md`
-   - **图文卡片/小红书图文/文章转卡片** → `references/scene-cards.md`
+- 有限元仿真 FEA
+- 疲劳分析 Fatigue
+- 振动分析 Vibration
+- 耐久分析 Durability
+- 代码开发 Code
+- AI 辅助工程分析 AI
 
-### Step 3: 拷模板
-从 `assets/` 选择对应模板作为起点:
-- 教程型 → `assets/template-tutorial.html`
-- 活动页/Landing → `assets/template-landing.html`
-- App型/功能型 → `assets/template-app.html`
-- **图文卡片** → `assets/template-cards.html`
+## 使用方式
 
-**从模板开始改,不从零写。**
+1. 先读 `brand-dna.md`。
+2. 根据任务类型读对应场景文件：
+   - 教程 / 技术说明：`references/scene-tutorial.md`
+   - Landing / 个人主页：`references/scene-landing.md`
+   - App / 工具界面：`references/scene-app.md`
+   - 图文卡片 / 知识卡片：`references/scene-cards.md`
+3. 从 `assets/template-*.html` 选择模板开始，不从零写。
+4. 至少使用一个 Johnson IP 资产。
+5. 对照 `references/checklist.md` 自检，P0 不通过必须修改。
 
-### Step 4: 选布局组合
-从 `references/layouts.md` 中选取 3~5 种布局模式,为每个 section 分配不同布局。
+## 视觉规则
 
-**每个 section 布局必须不同。**
+- 主色使用工程蓝 `#1E3A8A`
+- 辅助色使用科技绿 `#10B981`
+- 强调色使用活力橙 `#F97316`
+- 点缀色使用明亮黄 `#FACC15`
+- 背景优先使用暖白 `#FEFCF6`
+- 页面风格应明亮、专业、知识卡片化
+- 图形应有手绘蜡笔 / 彩铅质感和白色贴纸描边
+- 不使用通用 AI 蓝紫渐变、赛博朋克、玻璃拟态或照片写实风
 
-(图文卡片模式:参考 `scene-cards.md` 中的推荐排版手法,为每页选择不同手法。)
+## IP 使用规则
 
-### Step 5: 选组件填充
-从 `references/components.md` 中选取组件填入各 section。
+需要头像时使用：
 
-**硬规则:禁止使用任何HTML默认样式。** 所有引用块、列表、表格、卡片必须从 components.md 里选用对应组件的代码。不允许用默认 `<blockquote>`、默认 `border-left` 引用、无样式 `<ul>/<ol>`、默认 `<table>`。如果在 components.md 里找不到合适的,自己设计一个符合 brand-dna 规范的,但绝不能用浏览器默认样式。
+`assets/avatar.jpg`
 
-### Step 6: 自检
-对照 `references/checklist.md` 逐条检查:
-- **P0 必须全过** - 任何一条不过就要改
-- P1 应过 - 尽量满足
-- P2 加分 - 锦上添花
+需要人物形象时使用：
 
-(图文卡片模式:额外对照 `scene-cards.md` 底部的 Checklist。)
+`assets/character.png`
+`assets/character-half.png`
+`assets/character-transparent.png`
 
-### Step 7: 交付
-输出最终 HTML 文件,确保可直接在浏览器打开。
+需要横幅时使用：
 
-## 场景类型速查
+`assets/banner-engineering.png`
 
-| 类型 | 场景文件 | 模板 |
-|------|----------|------|
-| 教程型/介绍型/科普型 | `references/scene-tutorial.md` | `assets/template-tutorial.html` |
-| 活动页/分享会/Landing | `references/scene-landing.md` | `assets/template-landing.html` |
-| App型/功能型 | `references/scene-app.md` | `assets/template-app.html` |
-| 图文卡片/小红书图文 | `references/scene-cards.md` | `assets/template-cards.html` |
+需要工程标签时使用：
 
-## 关键原则
-- **从模板开始改,不从零写** - 模板已内置品牌变量和基础结构
-- **每个 section 布局必须不同** - 避免单调重复,从 layouts.md 选不同模式
-- **做完必须跑 checklist** - P0 全过才能交付
+`assets/stickers/sticker-fea.png`
+`assets/stickers/sticker-fatigue.png`
+`assets/stickers/sticker-vibration.png`
+`assets/stickers/sticker-durability.png`
+`assets/stickers/sticker-code.png`
+`assets/stickers/sticker-ai.png`
 
-## 禁忌
-严格遵守 `brand-dna.md` 的禁忌清单,不在此重复。核心底线:截图发 Twitter 不会被说"又是AI做的"。
+需要互动情绪时使用：
+
+`assets/emoji/emoji-like.png`
+`assets/emoji/emoji-think.png`
+`assets/emoji/emoji-coding.png`
+`assets/emoji/emoji-cheer.png`
+`assets/emoji/emoji-idea.png`
+`assets/emoji/emoji-coffee.png`
+`assets/emoji/emoji-question.png`
+`assets/emoji/emoji-done.png`
+
+## 路径规则
+
+图片路径必须使用本仓库相对路径，例如：
+
+```html
+<img src="assets/avatar.jpg" alt="Johnson Avatar">
+<img src="assets/banner-engineering.png" alt="Engineering Banner">
+<img src="assets/stickers/sticker-fea.png" alt="FEA">
+```
+
+不要使用绝对路径、下载目录路径或远程图片链接。

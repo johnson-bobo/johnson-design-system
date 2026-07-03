@@ -3,306 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><!-- 活动标题 --></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Johnson Engineering Landing</title>
   <style>
-    /* === CSS变量 === */
     :root {
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --cream-dark: #faf6eb;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
-      /* 合作品牌色（按需启用） */
-      /* --partner: #F1752D; */
+      --color-primary: #1E3A8A;
+      --color-secondary: #10B981;
+      --color-accent: #F97316;
+      --color-highlight: #FACC15;
+      --color-ink: #333333;
+      --color-bg: #FEFCF6;
+      --color-card: #FFFFFF;
+      --color-border: #E5E7EB;
+      --color-primary-soft: #EFF6FF;
+      --color-secondary-soft: #ECFDF5;
+      --color-highlight-soft: #FFFBEB;
+      --color-accent-soft: #FFF7ED;
+      --blue: var(--color-primary);
+      --yellow: var(--color-highlight);
+      --red: var(--color-accent);
+      --green: var(--color-secondary);
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink);
-      background: var(--cream);
-    }
-
-    ::selection {
-      background: var(--yellow);
-      color: var(--ink);
-    }
-
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* === HERO 全屏 === */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 900;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--ink-light);
-      max-width: 600px;
-    }
-
-    .hero .label-caps {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-weight: 500;
-      color: var(--ink-faint);
-      margin-bottom: 1rem;
-    }
-
-    /* === 三栏Section === */
-    .section { padding: clamp(80px, 12vh, 160px) 0; }
-    .section--alt { background: var(--cream-dark); }
-
-    .section-header {
-      margin-bottom: clamp(40px, 6vw, 80px);
-    }
-
-    .section-number {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--blue);
-      opacity: 0.3;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    .section-title {
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 900;
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-    }
-
-    .three-col {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(20px, 2.5vw, 32px);
-    }
-
-    .chair-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: clamp(24px, 3vw, 36px);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,.06);
-    }
-    .chair-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-    }
-    .chair-card:nth-child(1)::before { background: var(--blue); }
-    .chair-card:nth-child(2)::before { background: var(--yellow); }
-    .chair-card:nth-child(3)::before { background: var(--red); }
-
-    /* === 深色面板 === */
-    .dark-section {
-      background: var(--dark-panel);
-      color: #e2e8f0;
-      padding: clamp(80px, 12vh, 160px) 0;
-    }
-
-    .dark-section .quote-text {
-      font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.3rem, 3vw, 2rem);
-      font-weight: 700;
-      line-height: 1.8;
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .dark-section .quote-text em {
-      color: var(--yellow);
-      font-style: normal;
-    }
-
-    /* === Pull Quote === */
-    .viral-pullquote {
-      padding: 36px 40px;
-      background: var(--cream);
-      border-radius: 16px;
-      border: 2px solid var(--yellow);
-      position: relative;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .viral-pullquote::before {
-      content: '"';
-      font-family: 'Fraunces', serif;
-      font-size: 5rem;
-      color: var(--yellow);
-      position: absolute;
-      top: -10px; left: 20px;
-      opacity: 0.5;
-      line-height: 1;
-    }
-    .viral-pullquote p {
-      font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      font-weight: 700;
-      line-height: 1.8;
-    }
-
-    /* === CTA === */
-    .cta-section {
-      text-align: center;
-      padding: clamp(80px, 12vh, 160px) 2rem;
-    }
-    .cta-section h2 {
-      font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
-      margin-bottom: 1rem;
-    }
-    .cta-section p {
-      font-size: 1rem;
-      color: var(--ink-light);
-      margin-bottom: 2rem;
-    }
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 16px 36px;
-      background: var(--blue);
-      color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43,127,216,0.3);
-    }
-
-    /* === Scroll Reveal === */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
-
-    /* === 响应式 === */
-    @media (max-width: 900px) {
-      .hero { min-height: auto; padding: 4rem 1.5rem; }
-      .three-col { grid-template-columns: 1fr; }
-      .cta-button { width: 100%; justify-content: center; }
-    }
-
-    @media (max-width: 600px) {
-      body { font-size: 15px; }
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Noto Sans SC", "PingFang SC", sans-serif; background: var(--color-bg); color: var(--color-ink); line-height: 1.7; }
+    .page { overflow: hidden; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .hero { min-height: 88vh; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(32px, 5vw, 72px); padding: 72px 0; }
+    .eyebrow { color: var(--color-secondary); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+    h1 { margin-top: 16px; color: var(--color-primary); font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: .98; letter-spacing: -.05em; }
+    .lead { margin-top: 24px; font-size: clamp(1.05rem, 2vw, 1.3rem); max-width: 620px; }
+    .actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-primary, .btn-accent, .btn-warning { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+    .btn-primary { background: var(--color-primary); color: white; }
+    .btn-accent { background: var(--color-highlight); color: var(--color-primary); }
+    .btn-warning { background: var(--color-accent); color: white; }
+    .hero-card { position: relative; padding: 22px; background: var(--color-highlight); border-radius: 32px; border: 2px solid rgba(30,58,138,.15); box-shadow: 0 24px 80px rgba(30,58,138,.16); transform: rotate(1.5deg); }
+    .hero-card img { width: 100%; display: block; border-radius: 24px; background: white; }
+    .section { padding: clamp(68px, 10vw, 120px) 0; }
+    .section-title { color: var(--color-primary); font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 20px; padding: 24px; box-shadow: 0 12px 36px rgba(30,58,138,.06); }
+    .card img { width: 86px; height: 86px; object-fit: contain; margin-bottom: 18px; }
+    .card h3 { color: var(--color-primary); font-size: 1.2rem; margin-bottom: 8px; }
+    .tag-fea, .tag-vibration, .tag-code { color: var(--color-primary); background: var(--color-primary-soft); }
+    .tag-fatigue { color: var(--color-accent); background: var(--color-accent-soft); }
+    .tag-durability, .tag-ai { color: var(--color-secondary); background: var(--color-secondary-soft); }
+    .tag { display: inline-flex; border-radius: 999px; padding: 4px 10px; font-size: .78rem; font-weight: 800; margin-bottom: 12px; }
+    @media (max-width: 860px) { .hero, .grid { grid-template-columns: 1fr; } .hero { min-height: auto; } }
   </style>
 </head>
 <body>
-
-  <!-- ====== HERO 全屏 ====== -->
-  <section class="hero">
-    <span class="label-caps"><!-- 活动类型/日期 --></span>
-    <h1><!-- 活动主标题 --></h1>
-    <p><!-- 活动副标题/一句话描述 --></p>
-  </section>
-
-  <!-- ====== 三栏亮点 ====== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-number">01</span>
-        <h2 class="section-title"><!-- 亮点/嘉宾/核心价值 --></h2>
-      </div>
-      <div class="three-col">
-        <div class="chair-card reveal reveal-d1">
-          <!-- 卡片1内容 -->
-        </div>
-        <div class="chair-card reveal reveal-d2">
-          <!-- 卡片2内容 -->
-        </div>
-        <div class="chair-card reveal reveal-d3">
-          <!-- 卡片3内容 -->
+  <main class="page">
+    <section class="hero container">
+      <div>
+        <p class="eyebrow">Johnson Engineering Design System</p>
+        <h1>Engineering with Simulation for a Better Future</h1>
+        <p class="lead">用有限元、疲劳、振动、耐久、代码和 AI 辅助分析，把复杂工程问题讲清楚、算明白、交付稳。</p>
+        <div class="actions">
+          <a class="btn-primary" href="#capabilities">查看工程能力</a>
+          <a class="btn-accent" href="#workflow">了解分析流程</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ====== 深色面板（金句/核心观点） ====== -->
-  <section class="dark-section">
-    <div class="container reveal">
-      <p class="quote-text"><!-- 引用的 <em>重点词</em> 内容 --></p>
-    </div>
-  </section>
-
-  <!-- ====== Pull Quote ====== -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="viral-pullquote reveal">
-        <p><!-- 核心金句 --></p>
+      <figure class="hero-card">
+        <img src="banner-engineering.png" alt="Johnson Engineering Banner">
+      </figure>
+    </section>
+    <section id="capabilities" class="section container">
+      <h2 class="section-title">核心工程能力</h2>
+      <div class="grid">
+        <article class="card"><span class="tag tag-fea">FEA</span><img src="stickers/sticker-fea.png" alt="FEA"><h3>有限元仿真</h3><p>结构建模、应力云图、载荷边界、结果校核。</p></article>
+        <article class="card"><span class="tag tag-fatigue">Fatigue</span><img src="stickers/sticker-fatigue.png" alt="Fatigue"><h3>疲劳分析</h3><p>S-N 曲线、损伤累积、寿命预测和风险提示。</p></article>
+        <article class="card"><span class="tag tag-vibration">Vibration</span><img src="stickers/sticker-vibration.png" alt="Vibration"><h3>振动分析</h3><p>频谱、模态、响应和工程解释。</p></article>
       </div>
-    </div>
-  </section>
-
-  <!-- ====== CTA行动区 ====== -->
-  <section class="cta-section">
-    <h2 class="reveal"><!-- 行动号召标题 --></h2>
-    <p class="reveal reveal-d1"><!-- 行动描述 --></p>
-    <a href="#" class="cta-button reveal reveal-d2"><!-- 按钮文案 --></a>
-  </section>
-
-  <!-- ====== Scroll Reveal JS ====== -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+    </section>
+  </main>
 </body>
 </html>

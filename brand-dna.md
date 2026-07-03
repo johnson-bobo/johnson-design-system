@@ -1,140 +1,188 @@
-# Brand DNA — 品牌基因
+# Johnson Engineering Design System · Brand DNA
 
-> ⚠️ **使用前必须完成配置：** 把下面的品牌色、头像、气质关键词替换成你自己的。不配置就用，出来的东西会是别人的风格。
+## 1. Brand Positioning
 
----
+Johnson Engineering Design System 是一套面向工程技术内容的个人 IP 设计系统，服务于有限元仿真、疲劳、振动、耐久、代码开发和 AI 辅助工程分析。
 
-## 🎨 IP固定三色（示例配色，请替换为你自己的）
+它的目标不是做通用科技模板，而是让 Johnson 的工程判断、仿真经验和工具开发能力在网页、PPT、知识卡片和技术说明中拥有统一视觉识别。
 
-| 色名 | 色值 | 用途 |
-|------|------|------|
-| 蓝 | `#2B7FD8` | 主色调、标题、超链接、重点标记 |
-| 黄/金 | `#F4D758` | 强调、装饰、badges、连接线、高亮 |
-| 红 | `#E84A5F` | 点缀、高亮下划线、CTA、标签 |
+## 2. IP Personality
 
-三色比例原则：主色60% · 强调色30% · 点缀色10%（点缀色永远是点缀，不做主色）
+Johnson 的 IP 形象是一个专业、亲和、有工程可信感的力学工程师。
 
-> 💡 将上面三个色值替换成你自己的品牌色。不知道怎么选色？参考 `推荐色板.md`（如有）。
+关键词：
 
----
+- 专业
+- 可靠
+- 清晰
+- 工程化
+- 亲和
+- 知识传播
+- 不花哨
+- 不像通用 AI 模板
 
-## 👤 头像/IP形象
+## 3. Visual Style
 
-请将你的头像文件放入 `assets/avatar.jpg`（建议正方形，至少 400×400px）。
+核心视觉特征：
 
-如果你有完整IP形象（全身/半身），放入 `assets/character.png`。
+- 圆形徽章式工程师 IP
+- 手绘蜡笔 / 彩铅质感
+- 白色贴纸描边
+- 工程蓝主线条
+- 明亮黄知识卡片背景
+- 科技绿和活力橙点缀
+- 工程图标围绕 FEA / Fatigue / Vibration / Durability / Code / AI 展开
 
-### 使用规则
-- 需要头像时优先用 `assets/avatar.jpg`
-- 是否在页面中使用IP形象由你决定，不强制
+## 4. Brand Colors
 
----
+| 角色 | 色值 | 用途 |
+|---|---|---|
+| 主色 工程蓝 | `#1E3A8A` | 标题、按钮、图标、主线条 |
+| 辅助 科技绿 | `#10B981` | AI、耐久、通过、正向结果 |
+| 强调 活力橙 | `#F97316` | 风险、疲劳、重点提示 |
+| 点缀 明亮黄 | `#FACC15` | 背景氛围、贴纸、强调块 |
+| 中性 深灰 | `#333333` | 正文、说明文字 |
+| 背景 暖白 | `#FEFCF6` | 页面背景 |
+| 卡片 白色 | `#FFFFFF` | 内容卡片 |
+| 边框 浅灰 | `#E5E7EB` | 分隔、边框 |
 
-## 🔤 字体基因
+推荐 CSS 变量：
 
-### 核心原则
-- **标题用衬线，正文用无衬线** — 混搭产生节奏
-- **中英文搭配** — 英文做装饰/标签，中文承载内容
-- **字号对比极端** — 大的要很大，小的要真的小
+```css
+:root {
+  --color-primary: #1E3A8A;
+  --color-secondary: #10B981;
+  --color-accent: #F97316;
+  --color-highlight: #FACC15;
+  --color-ink: #333333;
+  --color-bg: #FEFCF6;
+  --color-card: #FFFFFF;
+  --color-border: #E5E7EB;
 
-### 推荐字体池
+  --color-primary-soft: #EFF6FF;
+  --color-secondary-soft: #ECFDF5;
+  --color-highlight-soft: #FFFBEB;
+  --color-accent-soft: #FFF7ED;
+}
+```
 
-| 场景 | 推荐 | 备注 |
-|------|------|------|
-| 英文装饰/标题 | `Fraunces` (italic) | 有品质的衬线体 |
-| 英文手写/轻松 | `Caveat` | 手绘感、标注、注释 |
-| 英文等宽/终端 | `Fira Code` | 技术/终端场景专用 |
-| 中文标题首选 | `Huiwen Mincho`（汇文明朝体） | 需本地ttf文件 |
-| 中文标题备选 | `Noto Serif SC` (900) | 无本地字体时的衬线体fallback |
-| 中文正文 | `Noto Sans SC` + 系统栈 | 跨平台无衬线 |
+使用比例：
 
-### 字号系统（fluid sizing）
-- Hero大标题: `clamp(2.8rem, 7vw, 5.5rem)`
-- Section标题: `clamp(1.6rem, 4vw, 2.6rem)`
-- 卡片标题: `1.15rem ~ 1.4rem`
-- 正文: `16px`
-- 辅助文字: `0.78rem ~ 0.85rem`
-- 大装饰数字: `clamp(3rem, 8vw, 7rem)` + `opacity: 0.12~0.2`
+- 工程蓝：标题、按钮、导航、主图标，约 35%
+- 明亮黄：背景氛围、重点块、贴纸感，约 25%
+- 暖白 / 白色：页面背景、卡片，约 25%
+- 科技绿：AI、耐久、通过、正向状态，约 10%
+- 活力橙：风险、疲劳、警示、重点标注，约 5%
 
----
+## 5. IP Assets
 
-## ✨ 气质关键词
+### Avatar
 
-设计出来的东西应该让人觉得：
+- `assets/avatar.jpg`
+- `assets/avatar-circle-512.png`
+- `assets/avatar-circle-256.png`
+- `assets/avatar-circle-128.png`
+- `assets/avatar-circle-64.png`
+- `assets/avatar-square-512.png`
+- `assets/avatar-square-256.png`
+- `assets/avatar-square-128.png`
+- `assets/avatar-square-64.png`
 
-- **可爱但有品质** — 不是幼儿风也不是奢侈风
-- **手绘蜡笔感** — 有温度、有人味
-- **不像AI** — 这是最高优先级的约束
-- **有设计师眼光** — 细节讲究、间距精确、色彩克制
-- **温暖但不幼稚** — 有内容有深度
-- **个人品牌感** — 一看就知道是"你的"
+### Character
 
-> 💡 请根据你自己的品牌调性修改上面的关键词。
+- `assets/character.png`
+- `assets/character-half.png`
+- `assets/character-transparent.png`
 
----
+### Banner
 
-## 🎨 配色扩展原则
+- `assets/banner-engineering.png`
 
-当三色不够用时：
+### Emoji
 
-- 背景永远偏暖：`#fefcf6`（主背景）、`#faf6eb`（深奶）
-- 文字永远非纯黑：用 `#1A1A2E`（墨色）或 `#1a1a1a`
-- 次要文字：`#4A4A5A`、`#555`、`#888`
-- 绝不用纯黑 `#000` 或纯白 `#fff`
-- 暗色场景底色：`#151821`、`#0d1117`（冷蓝调暗底，仅适用于HTML全屏页面，3:4卡片场景禁止深色底）
-- 终端绿：`#4ade80`（仅终端风格场景使用）
-- 径向渐变制造层次，不用纯平色
+- `assets/emoji/emoji-like.png`
+- `assets/emoji/emoji-think.png`
+- `assets/emoji/emoji-coding.png`
+- `assets/emoji/emoji-cheer.png`
+- `assets/emoji/emoji-idea.png`
+- `assets/emoji/emoji-coffee.png`
+- `assets/emoji/emoji-question.png`
+- `assets/emoji/emoji-done.png`
 
----
+### Stickers
 
-## 🚫 通用禁忌清单
+- `assets/stickers/sticker-fea.png`
+- `assets/stickers/sticker-fatigue.png`
+- `assets/stickers/sticker-vibration.png`
+- `assets/stickers/sticker-durability.png`
+- `assets/stickers/sticker-code.png`
+- `assets/stickers/sticker-ai.png`
 
-| 类型 | 禁止 |
-|------|------|
-| 配色 | 蓝紫渐变、cyan、neon、纯黑白、AI常用的冷灰蓝调、黑色/深色版面（仅3:4卡片场景禁止，HTML全屏页面不受限） |
-| 字体 | Inter/Roboto/Arial等overused字体（除非明确是终端风格辅助字体）、monospace充当"技术感" |
-| 布局 | 所有section居中、千篇一律卡片网格、cards嵌套cards |
-| 动效 | bounce/elastic、animate width/height、无限循环动画 |
-| 装饰 | glassmorphism、圆角矩形+阴影千篇一律、渐变文字、AI光效 |
-| 整体 | 看起来像AI生成的通用模板、generic Landing Page模板感 |
-| 边框 | 黄色装饰边框统一40px，不得更细 |
-| 排版 | 行间距/字间距必须肉眼检查，不允许出现过松或过紧的异常节奏 |
-| 图片 | AI生成的stock photo风、过度滤镜、无意义装饰图 |
-| 默认样式 | HTML默认blockquote、默认border-left引用块、无样式ul/ol列表、默认table——所有组件必须从components.md选用，绝不允许浏览器默认渲染 |
+### Outline
 
-### 自检问题
-做完设计后问自己：
-1. 这个页面截图发到社交媒体，会不会被人评论"又是AI做的"？
-2. 能不能一眼认出这是你的品牌？
-3. 有没有哪个部分让你觉得"见过很多次了"？
+- `assets/outline-square.png`
+- `assets/outline-half.png`
+- `assets/outline/outline-square.png`
+- `assets/outline/outline-half.png`
 
----
+### Dark Mode
 
-## 📐 通用间距原则
+- `assets/avatar-dark.png`
 
-- Section之间: `clamp(80px, 12vh, 160px)`
-- 内容块之间: `clamp(40px, 6vw, 100px)`
-- 卡片内padding: `clamp(28px, 3vw, 44px)`
-- 元素间gap: `clamp(24px, 3vw, 48px)`
-- 全部用 `clamp()` 做fluid sizing
-- `max-width: 1300px` + `margin: 0 auto` 约束内容宽度
+## 6. Usage Rules
 
----
+### 首页 / Hero
 
-## 📱 响应式通用规则
+优先使用：
 
-- 断点: 900px（两栏→单栏）、600px（字号微缩）
-- 移动端是"重新排列"不是"缩小"
-- 尊重 `prefers-reduced-motion`
-- 移动端不隐藏内容——adapt不amputate
+```html
+<img src="assets/banner-engineering.png" alt="Engineering with Simulation for a Better Future">
+```
 
----
+或：
 
-## 🔍 细节规范
+```html
+<img src="assets/character.png" alt="Johnson Simulation Engineer">
+```
 
-- **选中文本高亮**: `::selection { background: 你的强调色; color: #1a1a1a; }`
-- **链接悬停**: 用强调色底色块或下划线，不用变色
+### 作者头像
 
----
+```html
+<img src="assets/avatar.jpg" alt="Johnson Avatar">
+```
 
-*This is the foundation. Every scene file builds on top of this.*
+### 半身人物
+
+```html
+<img src="assets/character-half.png" alt="Johnson Engineering Character">
+```
+
+### 技术贴纸
+
+```html
+<img src="assets/stickers/sticker-fea.png" alt="FEA">
+<img src="assets/stickers/sticker-fatigue.png" alt="Fatigue">
+<img src="assets/stickers/sticker-vibration.png" alt="Vibration">
+<img src="assets/stickers/sticker-durability.png" alt="Durability">
+<img src="assets/stickers/sticker-code.png" alt="Code">
+<img src="assets/stickers/sticker-ai.png" alt="AI">
+```
+
+## 7. Do and Don't
+
+### Do
+
+- 使用工程蓝作为主视觉
+- 使用明亮黄建立知识卡片感
+- 使用 Johnson IP 头像提升识别度
+- 页面内容结构清晰，有工程可信感
+- 技术模块要体现 FEA / Fatigue / Vibration / Durability / Code / AI
+
+### Don't
+
+- 不要使用旧品牌名、旧头像或旧人物描述
+- 不要使用通用 AI 蓝紫渐变
+- 不要赛博朋克
+- 不要照片写实
+- 不要把合集图当作单张素材
+- 不要使用绝对图片路径

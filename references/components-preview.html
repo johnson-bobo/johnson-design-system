@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Esther's Design System — 组件库</title>
+<title>Johnson Engineering Design System — 组件库</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Caveat:wght@400;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --blue: #2B7FD8;
-  --yellow: #F4D758;
-  --red: #E84A5F;
+  --blue: #1E3A8A;
+  --yellow: #FACC15;
+  --red: #F97316;
   --ink: #1a1a2e;
   --ink-light: #555;
   --ink-faint: #8A8A9A;
@@ -21,8 +21,8 @@
   --sub: #4A4A5A;
   --muted: #888;
   --bg-deep: #f5f0e8;
-  --accent: #2B7FD8;
-  --accent-light: #F4D758;
+  --accent: #1E3A8A;
+  --accent-light: #FACC15;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -87,7 +87,7 @@ body {
   transition: all 0.2s;
 }
 .toc-grid a:hover {
-  background: rgba(43,127,216,0.06);
+  background: rgba(30,58,138,0.06);
   color: var(--blue);
 }
 .toc-grid a .toc-num {
@@ -153,25 +153,25 @@ body {
 
 /* 1B Number Card */
 .number-card { position: relative; padding: 28px 24px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-.number-card .card-number { position: absolute; top: -10px; right: 10px; font-family: 'Fraunces', serif; font-size: 5.5rem; font-weight: 900; color: rgba(43, 127, 216, 0.08); line-height: 1; pointer-events: none; }
+.number-card .card-number { position: absolute; top: -10px; right: 10px; font-family: 'Fraunces', serif; font-size: 5.5rem; font-weight: 900; color: rgba(30, 58, 138, 0.08); line-height: 1; pointer-events: none; }
 .number-card .card-title { font-family: 'Noto Serif SC', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; position: relative; }
 .number-card .card-desc { font-size: 0.85rem; color: var(--ink-light); margin-bottom: 12px; position: relative; }
 
 /* 1C Tag Card */
 .tag-card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
 .tag-card .card-pill { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 500; margin-bottom: 14px; }
-.tag-card .card-pill--blue { background: rgba(43,127,216,0.1); color: var(--blue); }
-.tag-card .card-pill--yellow { background: rgba(244,215,88,0.25); color: #9a8100; }
-.tag-card .card-pill--red { background: rgba(232,74,95,0.1); color: var(--red); }
+.tag-card .card-pill--blue { background: rgba(30,58,138,0.1); color: var(--blue); }
+.tag-card .card-pill--yellow { background: rgba(250,204,21,0.25); color: #9a8100; }
+.tag-card .card-pill--red { background: rgba(249,115,22,0.1); color: var(--red); }
 .tag-card .card-title { font-family: 'Noto Serif SC', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
 .tag-card .card-desc { font-size: 0.85rem; color: var(--ink-light); }
 
 /* 1D Icon Card */
 .icon-card { display: flex; align-items: stretch; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04); min-height: 130px; }
 .icon-card .card-icon-area { flex: 0 0 33%; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
-.icon-card .card-icon-area--blue { background: rgba(43,127,216,0.06); }
-.icon-card .card-icon-area--yellow { background: rgba(244,215,88,0.12); }
-.icon-card .card-icon-area--red { background: rgba(232,74,95,0.06); }
+.icon-card .card-icon-area--blue { background: rgba(30,58,138,0.06); }
+.icon-card .card-icon-area--yellow { background: rgba(250,204,21,0.12); }
+.icon-card .card-icon-area--red { background: rgba(249,115,22,0.06); }
 .icon-card .card-content { flex: 1; padding: 18px 16px; display: flex; flex-direction: column; justify-content: center; }
 .icon-card .card-title { font-family: 'Noto Serif SC', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
 .icon-card .card-desc { font-size: 0.8rem; color: var(--ink-light); }
@@ -188,13 +188,13 @@ body {
 .quote-editorial .quote-desc { font-size: 0.88rem; color: var(--ink-light); line-height: 1.9; }
 .quote-editorial .quote-source { margin-top: 16px; font-size: 0.75rem; color: var(--ink-faint); font-family: 'Fira Code', monospace; display: block; }
 
-.quote-handwrite { position: relative; padding: 28px 24px; border: 2px dashed rgba(43,127,216,0.25); border-radius: 12px; background: white; }
+.quote-handwrite { position: relative; padding: 28px 24px; border: 2px dashed rgba(30,58,138,0.25); border-radius: 12px; background: white; }
 .quote-handwrite .quote-badge { position: absolute; top: -12px; left: 20px; font-family: 'Caveat', cursive; font-size: 1.1rem; font-weight: 700; color: var(--blue); background: var(--cream); padding: 0 10px; }
 .quote-handwrite .quote-title { font-family: 'Caveat', cursive; font-size: 1.6rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; transform: rotate(-0.5deg); }
 .quote-handwrite .quote-desc { font-size: 0.88rem; color: var(--ink-light); line-height: 1.8; }
 
 .quote-highlight { padding: 24px 28px; position: relative; }
-.quote-highlight .quote-title { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; font-weight: 900; margin-bottom: 12px; display: inline; background: linear-gradient(to top, rgba(244,215,88,0.5) 45%, transparent 45%); line-height: 1.8; padding: 2px 4px; }
+.quote-highlight .quote-title { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; font-weight: 900; margin-bottom: 12px; display: inline; background: linear-gradient(to top, rgba(250,204,21,0.5) 45%, transparent 45%); line-height: 1.8; padding: 2px 4px; }
 .quote-highlight .quote-desc { font-size: 0.88rem; color: var(--ink-light); line-height: 1.9; margin-top: 16px; }
 
 .quote-terminal { background: #1e1e2e; border-radius: 12px; overflow: hidden; font-family: 'Fira Code', monospace; }
@@ -215,11 +215,11 @@ body {
 /* 3. Key Insight */
 .key-insight.quote-minimal-ki { text-align: left; }
 .key-insight.quote-minimal-ki .quote-body-ki { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 1.1rem; line-height: 2; color: var(--ink); margin-bottom: 2rem; }
-.key-insight.quote-minimal-ki .quote-body-ki .hl { background: linear-gradient(transparent 60%, rgba(244,215,88,0.3) 60%); padding: 0 4px; }
+.key-insight.quote-minimal-ki .quote-body-ki .hl { background: linear-gradient(transparent 60%, rgba(250,204,21,0.3) 60%); padding: 0 4px; }
 .key-insight.quote-minimal-ki .quote-rule { width: 60px; height: 3px; background: var(--yellow); margin-bottom: 2rem; }
 .key-insight.quote-minimal-ki .quote-conclusion { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; font-weight: 900; color: var(--blue); line-height: 1.7; }
 
-.key-insight.quote-note { position: relative; padding: 24px 28px; background: white; border-radius: 10px; border: 1.5px dashed rgba(43, 127, 216, 0.3); }
+.key-insight.quote-note { position: relative; padding: 24px 28px; background: white; border-radius: 10px; border: 1.5px dashed rgba(30, 58, 138, 0.3); }
 .quote-note-tag { position: absolute; top: -10px; left: 20px; font-family: 'Caveat', cursive; font-size: 1rem; color: var(--blue); background: var(--cream); padding: 0 8px; font-weight: 700; }
 .key-insight.quote-note p { font-size: 0.93rem; line-height: 1.85; color: var(--ink-light); }
 
@@ -244,9 +244,9 @@ body {
 .code-macos .cm { color: #565f89; }
 
 .code-notebook { background: #fffef8; border: 1px solid #e8e4d9; border-radius: 4px; padding: 0; position: relative; box-shadow: 2px 3px 0 #e8e4d9; }
-.code-notebook .code-holes { position: absolute; left: 28px; top: 0; bottom: 0; width: 1px; background: rgba(232,74,95,0.2); }
+.code-notebook .code-holes { position: absolute; left: 28px; top: 0; bottom: 0; width: 1px; background: rgba(249,115,22,0.2); }
 .code-notebook .code-tab { padding: 8px 16px 8px 48px; border-bottom: 1px solid #e8e4d9; font-family: 'Caveat', cursive; font-size: 1rem; color: var(--blue); font-weight: 700; }
-.code-notebook pre { font-family: 'Fira Code', monospace; font-size: 0.8rem; line-height: 2.2; color: var(--ink); margin: 0; padding: 16px 20px 16px 48px; background-image: repeating-linear-gradient(transparent, transparent 31px, rgba(43,127,216,0.05) 31px, rgba(43,127,216,0.05) 32px); }
+.code-notebook pre { font-family: 'Fira Code', monospace; font-size: 0.8rem; line-height: 2.2; color: var(--ink); margin: 0; padding: 16px 20px 16px 48px; background-image: repeating-linear-gradient(transparent, transparent 31px, rgba(30,58,138,0.05) 31px, rgba(30,58,138,0.05) 32px); }
 
 .code-typewriter { background: #f5f0e8; border: 2px solid #d4c9b5; padding: 32px 28px; position: relative; }
 .code-typewriter::before { content: 'TYPEWRITER OUTPUT'; position: absolute; top: -11px; left: 20px; font-family: 'Fira Code', monospace; font-size: 0.6rem; letter-spacing: 2px; color: var(--ink-faint); background: #f5f0e8; padding: 0 8px; }
@@ -290,17 +290,17 @@ body {
 .chair-number-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .chair-number-card { position: relative; background: white; border-radius: 20px; padding: 40px 24px 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); overflow: hidden; }
 .chair-number-card .chair-big-num { position: absolute; top: -15px; right: -5px; font-family: 'Fraunces', serif; font-size: 6rem; font-weight: 900; line-height: 1; pointer-events: none; }
-.chair-number-card:nth-child(1) .chair-big-num { color: rgba(43,127,216,0.08); }
-.chair-number-card:nth-child(2) .chair-big-num { color: rgba(244,215,88,0.15); }
-.chair-number-card:nth-child(3) .chair-big-num { color: rgba(232,74,95,0.08); }
+.chair-number-card:nth-child(1) .chair-big-num { color: rgba(30,58,138,0.08); }
+.chair-number-card:nth-child(2) .chair-big-num { color: rgba(250,204,21,0.15); }
+.chair-number-card:nth-child(3) .chair-big-num { color: rgba(249,115,22,0.08); }
 .chair-number-card h3 { font-family: 'Noto Serif SC', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; position: relative; }
 .chair-number-card p { font-size: 0.85rem; color: var(--ink-light); line-height: 1.7; position: relative; }
 
 .chair-dashed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .chair-dashed-card { border: 2px dashed; border-radius: 16px; padding: 28px 22px; position: relative; background: white; }
-.chair-dashed-card:nth-child(1) { border-color: rgba(43,127,216,0.3); }
-.chair-dashed-card:nth-child(2) { border-color: rgba(244,215,88,0.5); }
-.chair-dashed-card:nth-child(3) { border-color: rgba(232,74,95,0.3); }
+.chair-dashed-card:nth-child(1) { border-color: rgba(30,58,138,0.3); }
+.chair-dashed-card:nth-child(2) { border-color: rgba(250,204,21,0.5); }
+.chair-dashed-card:nth-child(3) { border-color: rgba(249,115,22,0.3); }
 .chair-dashed-card .chair-label { position: absolute; top: -10px; left: 16px; font-family: 'Caveat', cursive; font-size: 0.95rem; font-weight: 700; background: var(--cream); padding: 0 8px; }
 .chair-dashed-card:nth-child(1) .chair-label { color: var(--blue); }
 .chair-dashed-card:nth-child(2) .chair-label { color: #9a8100; }
@@ -310,9 +310,9 @@ body {
 
 .chair-gradient-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .chair-gradient-card { border-radius: 20px; padding: 32px 24px; position: relative; overflow: hidden; }
-.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(43,127,216,0.08), rgba(43,127,216,0.02)); }
-.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(244,215,88,0.15), rgba(244,215,88,0.03)); }
-.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(232,74,95,0.08), rgba(232,74,95,0.02)); }
+.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(30,58,138,0.08), rgba(30,58,138,0.02)); }
+.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(250,204,21,0.15), rgba(250,204,21,0.03)); }
+.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(249,115,22,0.08), rgba(249,115,22,0.02)); }
 .chair-gradient-card .chair-emoji { font-size: 2rem; margin-bottom: 16px; }
 .chair-gradient-card h3 { font-family: 'Noto Serif SC', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
 .chair-gradient-card p { font-size: 0.85rem; color: var(--ink-light); line-height: 1.7; }
@@ -327,7 +327,7 @@ body {
 .chair-typo-card .chair-meta { margin-top: 16px; font-family: 'Fira Code', monospace; font-size: 0.65rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1px; display: block; }
 
 /* 11. System Flow */
-.system-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 24px 32px; background: var(--cream); border-radius: 14px; border: 1px solid rgba(43, 127, 216, 0.1); }
+.system-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 24px 32px; background: var(--cream); border-radius: 14px; border: 1px solid rgba(30, 58, 138, 0.1); }
 .system-flow span { font-size: 0.9rem; padding: 6px 14px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
 .flow-arrow { color: var(--blue) !important; font-size: 1.2rem !important; background: transparent !important; box-shadow: none !important; padding: 0 !important; }
 
@@ -370,7 +370,7 @@ body {
 /* 17. Book Card */
 .book-card { background: #fff; border-radius: 16px; padding: 28px 24px 22px; box-shadow: 0 8px 40px rgba(0,0,0,.1); cursor: pointer; transition: transform .2s, box-shadow .2s; }
 .book-card:hover { transform: translateY(-4px); box-shadow: 0 12px 48px rgba(0,0,0,.14); }
-.book-card .category-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; background: rgba(43,127,216,0.1); color: var(--blue); margin-bottom: 0.75rem; }
+.book-card .category-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; background: rgba(30,58,138,0.1); color: var(--blue); margin-bottom: 0.75rem; }
 .book-card h3 { font-family: 'Noto Serif SC', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
 .book-card .author { font-size: 0.8rem; color: var(--ink-faint); margin-bottom: 8px; }
 .book-card .verdict { border-left: 3px solid var(--blue); padding-left: 12px; font-size: 0.85rem; color: var(--ink-light); margin: 0.75rem 0; }
@@ -385,7 +385,7 @@ body {
 
 /* 20. CTA Button */
 .cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--blue); color: #fff; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform .2s, box-shadow .2s; }
-.cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(43,127,216,0.3); }
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30,58,138,0.3); }
 .cta-button--yellow { background: var(--yellow); color: var(--ink); }
 
 /* 21. Ticket Cards */
@@ -394,7 +394,7 @@ body {
 .ticket-vintage .main-section { flex: 1; padding: clamp(20px, 3vw, 36px); display: flex; flex-direction: column; gap: 16px; }
 .ticket-vintage .stub-section { width: 28%; padding: clamp(16px, 2vw, 28px); background: #f5f0e3; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; text-align: center; }
 .ticket-vintage .airline-row { display: flex; align-items: center; gap: 8px; font-family: 'Fira Code', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #4A4A5A; }
-.ticket-vintage .airline-row .badge { background: #2B7FD8; color: #fefcf6; padding: 2px 8px; font-size: 0.65rem; font-weight: 600; }
+.ticket-vintage .airline-row .badge { background: #1E3A8A; color: #fefcf6; padding: 2px 8px; font-size: 0.65rem; font-weight: 600; }
 .ticket-vintage .route-row { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); }
 .ticket-vintage .city-code { font-family: 'Fira Code', monospace; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; color: #1A1A2E; }
 .ticket-vintage .city-name { font-size: 0.7rem; color: #888; }
@@ -408,7 +408,7 @@ body {
 .ticket-vintage .detail-item span { font-family: 'Fira Code', monospace; font-size: 0.78rem; color: #1A1A2E; }
 .ticket-vintage .stub-section .stub-label { font-family: 'Fira Code', monospace; font-size: 0.6rem; color: #888; text-transform: uppercase; letter-spacing: 0.1em; }
 .ticket-vintage .stub-section .stub-date { font-family: 'Fira Code', monospace; font-size: 0.85rem; font-weight: 600; }
-.ticket-vintage .stub-section .stub-seat { font-family: 'Fira Code', monospace; font-size: 1.4rem; font-weight: 600; color: #E84A5F; }
+.ticket-vintage .stub-section .stub-seat { font-family: 'Fira Code', monospace; font-size: 1.4rem; font-weight: 600; color: #F97316; }
 
 /* 22. Hotel Cards */
 .hotel-editorial { border-top: 4px solid var(--ink); padding: clamp(24px, 3vw, 40px) 0; }
@@ -483,7 +483,7 @@ body {
 .hero-cluster .ring {
   position: absolute;
   inset: -12px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(30,58,138,0.25);
   border-radius: 50%;
   animation: heroSpin 20s linear infinite;
 }
@@ -491,7 +491,7 @@ body {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(43,127,216,0.1), transparent);
+  background: radial-gradient(circle, rgba(30,58,138,0.1), transparent);
 }
 .hero-cluster .avatar-img {
   width: 100%; height: 100%;
@@ -685,7 +685,7 @@ body {
 
 <!-- Page Header -->
 <header class="page-header">
-  <h1>Esther's Design System — <span>组件库</span></h1>
+  <h1>Johnson Engineering Design System — <span>组件库</span></h1>
   <p>20+ 经过验证的可复用组件，涵盖卡片、引用块、代码面板、流程条、对话气泡、导航栏等。直接预览效果。</p>
 </header>
 
@@ -770,17 +770,17 @@ body {
     <div class="demo-box">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
         <div class="tag-card">
-          <span class="card-pill card-pill--blue">设计工具</span>
+          <span class="card-pill card-pill--blue">有限元仿真</span>
           <h3 class="card-title">Figma 进阶</h3>
           <p class="card-desc">组件变体、自动布局与设计系统搭建</p>
         </div>
         <div class="tag-card">
-          <span class="card-pill card-pill--yellow">前端开发</span>
+          <span class="card-pill card-pill--yellow">代码工具</span>
           <h3 class="card-title">CSS Grid 布局</h3>
           <p class="card-desc">二维布局利器，解决复杂网格场景</p>
         </div>
         <div class="tag-card">
-          <span class="card-pill card-pill--red">运营策略</span>
+          <span class="card-pill card-pill--red">耐久分析</span>
           <h3 class="card-title">用户增长</h3>
           <p class="card-desc">从0到1搭建增长飞轮</p>
         </div>
@@ -803,7 +803,7 @@ body {
           <div class="card-icon-area card-icon-area--yellow">✨</div>
           <div class="card-content">
             <h3 class="card-title">动效设计</h3>
-            <p class="card-desc">用微交互提升产品体验感知</p>
+            <p class="card-desc">用振动分析提升产品体验感知</p>
           </div>
         </div>
       </div>
@@ -888,7 +888,7 @@ body {
     </div>
     <div style="margin-top: 32px;">
       <span class="section-number">02</span>
-      <h2 class="section-title-demo">设计原则</h2>
+      <h2 class="section-title-demo">工程原则</h2>
     </div>
   </div>
 </div>
@@ -947,9 +947,9 @@ body {
         <div class="code-body">
           <pre><code><span class="kw">const</span> <span class="fn">brand</span> = {
   colors: {
-    blue: <span class="str">'#2B7FD8'</span>,   <span class="cm">// 60% — 主色调</span>
-    yellow: <span class="str">'#F4D758'</span>, <span class="cm">// 30% — 活力</span>
-    red: <span class="str">'#E84A5F'</span>,    <span class="cm">// 10% — 强调</span>
+    blue: <span class="str">'#1E3A8A'</span>,   <span class="cm">// 60% — 主色调</span>
+    yellow: <span class="str">'#FACC15'</span>, <span class="cm">// 30% — 活力</span>
+    red: <span class="str">'#F97316'</span>,    <span class="cm">// 10% — 强调</span>
   },
   fonts: {
     heading: <span class="str">'Noto Serif SC'</span>,
@@ -966,8 +966,8 @@ body {
     <div class="demo-box">
       <div class="code-notebook">
         <div class="code-holes"></div>
-        <div class="code-tab">✏️ 设计原则.md</div>
-        <pre><code># 设计原则
+        <div class="code-tab">✏️ 工程原则.md</div>
+        <pre><code># 工程原则
 
 1. 一致性优先
 2. 用户体验高于视觉华丽
@@ -996,9 +996,9 @@ body {
       <div class="code-clean">
         <span class="code-corner-tag">CSS</span>
         <pre><code><span class="kw">:root</span> {
-  <span class="fn">--blue</span>: <span class="str">#2B7FD8</span>;
-  <span class="fn">--yellow</span>: <span class="str">#F4D758</span>;
-  <span class="fn">--red</span>: <span class="str">#E84A5F</span>;
+  <span class="fn">--blue</span>: <span class="str">#1E3A8A</span>;
+  <span class="fn">--yellow</span>: <span class="str">#FACC15</span>;
+  <span class="fn">--red</span>: <span class="str">#F97316</span>;
   <span class="fn">--bg</span>: <span class="str">#faf8f5</span>;
 }
 <span class="cm">/* 品牌色使用比例: 6:3:1 */</span></code></pre>
@@ -1058,7 +1058,7 @@ body {
   <p class="desc">固定在顶部的毛玻璃导航（示例为非固定版本）。</p>
   <div class="demo-box">
     <div class="demo-nav">
-      <span style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem;">Esther</span>
+      <span style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem;">Johnson</span>
       <div class="nav-links">
         <a href="#">关于</a>
         <a href="#">作品</a>
@@ -1109,7 +1109,7 @@ body {
         </div>
         <div class="chair-dashed-card">
           <span class="chair-label">Code #2</span>
-          <h3>前端开发</h3>
+          <h3>代码工具</h3>
           <p>HTML/CSS/JS 实现像素级还原设计稿</p>
         </div>
         <div class="chair-dashed-card">
@@ -1258,7 +1258,7 @@ body {
     <div class="quote-section-demo">
       <div class="quote-inner">
         <p class="quote-text">好的设计像<em>空气</em>一样——<br>你感受不到它的存在，但离开它就会窒息。</p>
-        <p class="quote-attr">— Esther's Design Philosophy</p>
+        <p class="quote-attr">— Johnson's Design Philosophy</p>
       </div>
     </div>
   </div>
@@ -1273,7 +1273,7 @@ body {
     <div class="filter-bar">
       <button class="filter-tag active">全部</button>
       <button class="filter-tag">UI设计</button>
-      <button class="filter-tag">前端开发</button>
+      <button class="filter-tag">代码工具</button>
       <button class="filter-tag">品牌设计</button>
       <button class="filter-tag">动效</button>
     </div>
@@ -1489,7 +1489,7 @@ body {
       <div class="jp-vline"></div>
       <div class="jp-kanji">設計</div>
       <div class="jp-circle">✦</div>
-      <div class="jp-subtitle">Esther · Design · System</div>
+      <div class="jp-subtitle">Johnson · Design · System</div>
     </div>
   </div>
 </div>
@@ -1782,9 +1782,9 @@ body {
   <h2 class="section-title" style="font-size:1.4rem;">Sparkles Text — 星光文字</h2>
   <p class="section-subtitle" style="font-size:0.85rem;color:var(--ink-faint);margin-bottom:2rem;">文字周围飘闪烁星星粒子。适合标题高亮、成就展示、情绪表达。</p>
   <div class="demo-box" style="display:flex;flex-direction:column;align-items:center;gap:32px;padding:48px 24px;">
-    <div data-sparkle-colors="#F4D758,#F4D758,#E84A5F" style="font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(3rem,8vw,5rem);color:var(--blue);padding:16px 32px;">Build</div>
-    <div data-sparkle-colors="#F4D758,#F4D758,#2B7FD8" style="font-family:'Noto Serif SC',serif;font-weight:900;font-size:clamp(2rem,5vw,3.5rem);color:var(--ink);padding:12px 24px;">Agent时代</div>
-    <div data-sparkle-colors="#F4D758,#2B7FD8" style="font-family:'Caveat',cursive;font-size:1.8rem;color:var(--ink);padding:8px 20px;">Hello World</div>
+    <div data-sparkle-colors="#FACC15,#FACC15,#F97316" style="font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(3rem,8vw,5rem);color:var(--blue);padding:16px 32px;">Build</div>
+    <div data-sparkle-colors="#FACC15,#FACC15,#1E3A8A" style="font-family:'Noto Serif SC',serif;font-weight:900;font-size:clamp(2rem,5vw,3.5rem);color:var(--ink);padding:12px 24px;">Agent时代</div>
+    <div data-sparkle-colors="#FACC15,#1E3A8A" style="font-family:'Caveat',cursive;font-size:1.8rem;color:var(--ink);padding:8px 20px;">Hello World</div>
   </div>
 </div>
 
@@ -1828,7 +1828,7 @@ body {
 
 <!-- Footer -->
 <footer style="text-align: center; padding: 60px 24px; color: var(--ink-faint); font-size: 0.8rem; border-top: 1px solid rgba(0,0,0,0.04);">
-  <p style="font-family: 'Caveat', cursive; font-size: 1.2rem; color: var(--ink-light); margin-bottom: 8px;">Made with ♥ by Esther's Design System</p>
+  <p style="font-family: 'Caveat', cursive; font-size: 1.2rem; color: var(--ink-light); margin-bottom: 8px;">Made with ♥ by Johnson Engineering Design System</p>
   <p>34 组件 · 2026</p>
 </footer>
 
@@ -1887,7 +1887,7 @@ flipStyle.textContent = `
 .tab-example { margin-top: 1rem; background: #fff; border-radius: 10px; padding: 16px 20px; font-size: 0.85rem; font-family: 'Fira Code', monospace; color: var(--blue); border-left: 3px solid var(--yellow); }
 @keyframes tabFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .accordion-list { max-width: 600px; }
-.accordion-item { border-bottom: 1px solid rgba(43,127,216,0.15); }
+.accordion-item { border-bottom: 1px solid rgba(30,58,138,0.15); }
 .accordion-header { display: flex; align-items: center; gap: 16px; padding: 18px 0; cursor: pointer; transition: all 0.2s; }
 .accordion-header:hover { padding-left: 8px; }
 .accordion-step { width: 32px; height: 32px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -1962,7 +1962,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 
 // ============ COOL MODE ============
 (function() {
-  const colors = ['#2B7FD8','#2B7FD8','#F4D758','#F4D758','#F4D758','#E84A5F'];
+  const colors = ['#1E3A8A','#1E3A8A','#FACC15','#FACC15','#FACC15','#F97316'];
   const sizes = [12,16,20,28,36];
   let particles = [], container, animating = false;
   function getC() { if(container) return container; container=document.createElement('div'); container.style.cssText='overflow:hidden;position:fixed;inset:0;pointer-events:none;z-index:2147483647;'; document.body.appendChild(container); return container; }
